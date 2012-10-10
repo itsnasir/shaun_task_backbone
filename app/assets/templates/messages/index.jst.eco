@@ -1,0 +1,17 @@
+<div id="main">   
+  <% groups = inGroupsOf(@messages.toArray(),3) %>  
+  <% for messages in groups: %>
+      <div class="row"> 
+          <% for message in messages: %>
+              <div class="col">                     
+                <form id="frmMessage_<%= message.get('id')%>" class="frmMessage">
+                    <input type="text" name="message_content" class="formTextField" id="message_content_<%= message.get('id') %>" value = "<%= message.get('content') %>"/>
+                    <input type="hidden" name="id" value="<%= message.get('id') %>" />
+                    <input type = "submit" class="formBtn" value="Send" />
+                </form>
+              </div>
+          <% end %>
+      </div>  
+  <% end %>
+ 
+</div>

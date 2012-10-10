@@ -1,2 +1,3 @@
-shaun_task_backbone
+Backbone JS Live with Pusher
 ===================
+
